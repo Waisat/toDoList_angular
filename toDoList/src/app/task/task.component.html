@@ -1,0 +1,37 @@
+
+<div id="container">
+  <div id="toDoListTitle">
+<h2>{{parentData}}</h2>
+    <label for="input_edit_title">Edition du Titre</label>
+<input id="input_edit_title" type="text" #myTitle >
+    <button id="editionTitle" (click)="editTitleOnClick(myTitle)">Editer</button>
+  </div>
+
+  <div id="add_task">
+    <label for="add_button">Nouvelle taches</label>
+    <input id="add_input" type="text" #newTask>
+    <button id="add_button" (click)="addTask(newTask)">Ajouter une tache</button>
+
+  </div>
+
+  <table *ngFor="let task of taskTable; index as i ">
+    <tr>
+        <td>{{i}}</td>
+      <td [ngClass]="messageAlert" >{{task.taskName}}</td>
+      <label for="status_input">Status input</label>
+      <input id="status_input" type="checkbox" [value]="task.status" checked>
+      <label for="input-taskname">Intitulé de la tâche</label>
+      <input id="input-taskname" type="text" [value]="task.taskName" #myedit >
+
+      <button id="edition" (click)="editOnClick(i, myedit)" >Editer</button>
+      <button id="delete" (click)="deleteOnClick(i)" >Supprimer</button>
+
+    </tr>
+
+  </table>
+
+<button id="local-storage" (click)="saveLocalStorage()">Sauvegarder La ToDoList</button>
+</div>
+
+
+

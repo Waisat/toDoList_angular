@@ -1,0 +1,47 @@
+#container{
+
+  color: red;
+}
+h1{
+ text-align: center;
+}
+
+table{
+  margin: 0 auto;
+  border: 2px solid black;
+  width: 50%;
+}
+
+table tr td{
+  font-size: 25px;
+  margin: 0 auto;
+}
+
+.status-checked{
+  background-color : rgba(0, 255, 0 , 0.2);
+}
+
+.status-not-checked{
+  background-color : rgba(255, 0, 0 , 0.2);
+}
+
+#toDoListTitle{
+  text-align: center;
+  margin: 0 10px;
+}
+
+#add_task{
+  text-align: center;
+  padding: 2%;
+}
+
+#local-storage{
+  margin: 0 auto;
+}
+
+button{
+  width: 10%;
+  height: auto;
+  margin: 0 10px;
+
+}
